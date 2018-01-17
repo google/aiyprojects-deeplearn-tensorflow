@@ -1,12 +1,24 @@
 {
   "name": "deeplearn-tensorflow",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple tensorflow integration for deeplearn.",
   "engines": {
     "node": ">=6.0.0"
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "author": {
+    "name": "Markus Bordihn",
+    "email": "Markus@Bordihn.de",
+    "url": "https://github.com/MarkusBordihn"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Google/deeplearn-tensorflow.git"
+  },
+    "bugs": {
+    "url": "https://github.com/Google/deeplearn-tensorflow/issues"
+  },
+  "main": "dist/tensorflow_loader.js",
+  "types": "dist/tensorflow_loader.d.ts",
   "scripts": {
     "http-server": "http-server",
     "lint": "tslint -p . -t verbose",
@@ -15,11 +27,6 @@
     "sync": "echo Syncing. Please wait ... && git pull && git submodule init && git submodule update && npm run update",
     "update-deps": "npm prune && ncu -u -a &&  npm update",
     "update": "npm install npm-check-updates && npm run update-deps && npm install && npm test"
-  },
-  "author": {
-    "name": "Markus Bordihn",
-    "email": "Markus@Bordihn.de",
-    "url": "https://github.com/MarkusBordihn"
   },
   "license": "Apache-2.0",
   "dependencies": {
